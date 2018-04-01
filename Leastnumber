@@ -1,0 +1,35 @@
+Write a java program to find the LCM of N-number ?
+For example : - finding the least common factor of a & b using formula - (a*b)/(gcd(a,b))
+code :-
+
+import java.util.Scanner;
+
+public class leastCommon {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of element you want to find lcm : ");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter the lcm element : ");
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		lCommon(a,n);
+	}
+
+	private static void lCommon(int[] a, int n) {
+		int x = a[0];
+		for(int i=1;i<n;i++) {
+			x=(a[i]*x)/(gcd(a[i],x));
+		}
+		System.out.println("lcm of "+n+" is : "+x);
+	}
+
+	private static int gcd(int i, int x) {
+		if(x==0) {
+			return i;
+		}
+		return gcd(x,i%x);
+	}
+}
