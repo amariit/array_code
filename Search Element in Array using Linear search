@@ -1,0 +1,47 @@
+Given an array of integers A and an element E to search, find a position of the first occurrence element in the array. If the element is not found in the array return -1. 
+
+Write a function solution that accepts three parameters an array A, the number of elements in array N and element to search E. The function should return the first occurrence position of the element.
+
+Input
+    6 
+    3 4 5 6 8 9 
+    8 
+
+where, 
+    The first line represents the size of the array. 
+    The second line represents array elements. 
+    The third line represents the element to search. 
+
+Output
+    4 
+
+Note : Here for the given array [3 4 5 6 8 9] and element 8, which is at index 4 (index starts from 0) in array hence return 4. 
+
+__________________________________________**************************************************____________________________________
+
+Code : 
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int solution(int A[], int N, int E)
+{
+    for(int i=0;i<N;i++){
+        if(A[i]==E){
+            return i;
+        }
+    }
+    return -1;    
+}
+
+int main(int argc, char *args[])
+{
+    int i,N,E,*A;
+    scanf("%d",&N);
+    A = (int*)malloc(sizeof(int)*N);
+    for(i=0;i<N;i++)
+        scanf("%d",&A[i]);
+    scanf("%d",&E);
+    printf("%d",solution(A,N,E));
+    return 0;
+}
