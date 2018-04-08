@@ -1,5 +1,8 @@
 Write a java program to find the LCM of N-number ?
 For example : - finding the least common factor of a & b using formula - (a*b)/(gcd(a,b))
+
+___________________________________******************************************__________________________________
+
 code :-
 
 import java.util.Scanner;
