@@ -1,6 +1,8 @@
 Write a java program to sort an array in the waveform format ?
 for example a1 > a2 < a3 > a4 < a5 > a6  .... so on
 
+________________________________**********************************_________________________________
+
 import java.util.Scanner;
 
 public class waveForm {
