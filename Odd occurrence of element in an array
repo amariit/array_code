@@ -16,6 +16,8 @@ Output
     1 
 Note : Here for the given array, all elements of array repeated an even number of times except 6 and 7. Hence output is 1.
 
+___________________________________________**********************************************__________________________________
+
 Code : 
 
 #include<stdio.h>
