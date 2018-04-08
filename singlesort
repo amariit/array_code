@@ -1,5 +1,9 @@
 Write a java program to sort a array using single loop?
 
+_______________________________________*************************************************___________________________________________
+
+Code : 
+
 import java.util.Scanner;
 public class singlesort {
 	public static void main(String[] args) {
