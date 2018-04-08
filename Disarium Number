@@ -1,0 +1,54 @@
+Given an integer N, find whether N is a Disarium or not.  
+
+Write a function solution that accepts an integer N. The function should returns 1 if N is Disarium number else 0. 
+
+Input 
+    135 
+
+Output 
+    1 
+
+Note : For 135, sum of digits powered with their respective position = 11 + 32 + 53 = 135, which is equal to an original number. 
+
+_______________________**************************************_________________________________________
+
+Code : 
+
+#include <stdio.h>
+#include <math.h>
+
+int countNum(int N){
+    int len=0;
+    while(N){
+        N=N/10;
+        len++;
+    }
+    return len;
+}
+int solution(int N)
+{
+    int len=countNum(N);
+    int n=len,sum=0;
+    int a[n],x=N;
+    while(x>0){
+        a[--n]=x%10;
+        x=x/10;
+    }
+    for(int i=0;i<len;i++){
+        sum=sum+pow(a[i],i+1);
+   }
+    if(sum==N){
+        return 1;
+    }    
+    else {
+        return 0;
+    }
+}
+
+int main(void)
+{
+    int N;
+    scanf("%d",&N);
+    printf("%d",solution(N));    
+    return 0;
+}
